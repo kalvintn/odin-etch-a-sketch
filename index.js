@@ -24,11 +24,13 @@ function createGrid(size){
             newSquare.style.height = newSquare.style.width;
             newSquare.style.border = "1px solid black";
             newSquare.style.boxSizing = "border-box";
+
+            newSquare.addEventListener("mouseenter", () => {
+                newSquare.style.backgroundColor = getRandomColor();
+            });
             
             grid.appendChild(newSquare);
     }
-
-    console.log(grid);
 }
 
 
@@ -41,4 +43,23 @@ function promptSize(){
     }
 
     createGrid(newSize);
+}
+
+
+
+
+
+
+
+function getRandomColor(){
+    let randomColor = "#";
+    let values = "0123456789abcdef";
+
+    for(let i = 0; i < 6; i++){
+        randomColor += values.charAt(Math.floor(Math.random() * 16));
+    }
+
+    console.log(randomColor);
+
+    return randomColor;
 }
