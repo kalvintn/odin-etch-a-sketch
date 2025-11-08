@@ -36,6 +36,7 @@ function createGrid(size){
 }
 
 
+
 // Custom grid size from user prompt
 function promptSize(){
     let newSize = prompt("Please enter a grid size (from 2 to 100): ");
@@ -46,10 +47,6 @@ function promptSize(){
 
     createGrid(newSize);
 }
-
-
-
-
 
 
 

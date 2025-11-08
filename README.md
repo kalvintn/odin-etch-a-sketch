@@ -1,6 +1,6 @@
 # Project
 Create an etch-a-sketch game using HTML, CSS, JavaScript, and DOM manipulation.  
-Allow for dynamic board size, dynamic colors, and a darkening effect per interaction.  
+Play with a dynamic board size and dynamic coloring. Have fun!
 
 # Author
 Made by Kalvin Nguyen.
