@@ -1,14 +1,16 @@
 
 let grid = document.querySelector(".grid");
 let sizeButton = document.querySelector(".size");
+let resetButton = document.querySelector(".reset");
 let gridWidth = 600;
 let gridHeight = 600;
 
 // default grid size
 createGrid(16);
 
+// event listeners for controls buttons
 sizeButton.addEventListener("click", promptSize);
-
+resetButton.addEventListener("click", reset);
 
 
 
@@ -59,7 +61,14 @@ function getRandomColor(){
         randomColor += values.charAt(Math.floor(Math.random() * 16));
     }
 
-    console.log(randomColor);
-
     return randomColor;
+}
+
+
+
+function reset(){
+    let squares = Array.from(grid.querySelectorAll("div"));
+    for(let i = 0; i < squares.length; i++){
+        squares[i].style.backgroundColor = "unset";
+    }
 }
